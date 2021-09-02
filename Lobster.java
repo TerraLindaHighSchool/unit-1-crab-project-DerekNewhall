@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lobster here.
+ * Lobster is an enemy
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Derek Newhall 
+ * @9/2
  */
 public class Lobster extends Actor
 {

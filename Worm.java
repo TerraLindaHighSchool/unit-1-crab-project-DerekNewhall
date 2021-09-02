@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Worm here.
+ * Worm is food
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @DerekNewhall 
+ * @9/2
  */
 public class Worm extends Actor
 {

@@ -51,6 +51,12 @@ public class Crab extends Actor
         {
             removeTouching(Worm.class);
             Greenfoot.playSound("slurp.wav");
+        //Winning the Game
+        if(getWorld().getObjects(Worm.class).size() == 0)
+        {
+            Greenfoot.setWorld(new WinSplash());
+            Greenfoot.playSound("fanfare.wav");
+            Greenfoot.stop();
         }
         
         if(isTouching(Lobster.class))
@@ -59,4 +65,5 @@ public class Crab extends Actor
             Greenfoot.stop();
         }
     }
-    }
+   }
+}   
