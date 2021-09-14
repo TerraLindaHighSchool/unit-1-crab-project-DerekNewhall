@@ -1,16 +1,17 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The class controls the Crab object
- * @author: Derek Newhall
- * @version: 8/30
+ * Write a description of class Mouse here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Crab extends Actor
+public class Mouse extends Actor
 {
     // This method repeats the following actions
     public void act()
     {
-        move(3);
+        move(0);
         turnAtEdge();
         checkKeyPress();
         onCollision();
@@ -30,40 +31,46 @@ public class Crab extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            turn(4);
+            setLocation(getX()+6,getY());
         }
         
         if(Greenfoot.isKeyDown("left"))
         {
-            turn(-4);
+            setLocation(getX()-6,getY());
         }
     
         if(Greenfoot.isKeyDown("up"))
         {
-            Greenfoot.delay(60);
+            setLocation(getX(),getY()-6);
+        }
+    
+        if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(),getY()+6);
         }
     }
+    
 
     // Checks for collisions with other objects
     private void onCollision( )
     {
-        if(isTouching(Worm.class))
+        if(isTouching(Pizza.class))
         {
-            removeTouching(Worm.class);
+            removeTouching(Pizza.class);
             Greenfoot.playSound("slurp.wav");
         //Winning the Game
-        if(getWorld().getObjects(Worm.class).size() == 0)
+        if(getWorld().getObjects(Pizza.class).size() == 0)
         {
             Greenfoot.setWorld(new WinSplash());
             Greenfoot.playSound("fanfare.wav");
             Greenfoot.stop();
         }
         
-        if(isTouching(Lobster.class))
+        if(isTouching(Lemur.class))
         {
-            Greenfoot.playSound("au.wav");
+            Greenfoot.playSound("amongus.wav");
             Greenfoot.stop();
         }
+        }
     }
-   }
-}   
+}
