@@ -50,6 +50,8 @@ public class space extends World
         addObject(pizza11,51,41);
         Pizza pizza12 = new Pizza();
         addObject(pizza12,500,58);
+        Lemur lemur2 = new Lemur();
+        addObject(lemur2,252,401);
     }
     
 }   
