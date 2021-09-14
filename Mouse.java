@@ -15,6 +15,7 @@ public class Mouse extends Actor
         turnAtEdge();
         checkKeyPress();
         onCollision();
+        turn(-7); 
     }
 
     // Turns the Crab at the edge

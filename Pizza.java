@@ -14,6 +14,7 @@ public class Pizza extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        turn(4);
+        move(4);
     }
 }

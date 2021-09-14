@@ -10,7 +10,7 @@ public class Lemur extends Actor
 {
   public void act()
     {
-        move(16);
+        move(14);
         turnAtEdge();
         onCollision();
     }
@@ -20,7 +20,7 @@ public class Lemur extends Actor
     {
         if(isAtEdge())
         {
-            turn(150);
+            turn(Greenfoot.getRandomNumber(150));
         }
     }
     
